@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Poornachandran G | Portfolio</title>
+<meta name="theme-color" content="#0a1719">
 <meta name="description" content="Portfolio of Poornachandran G, B.Sc. Computer Science student learning C, Python, Java and web development.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&family=Inter:wght@400;500;600&display=swap">
 <style>
 :root{
-  --bg:#f7f4fd;--nav:#ffffff;--surface:#ffffff;--line:#e2daf2;--ink:#231a38;--mut:#5c5075;--acc:#7b5bc7;--acc-ink:#ffffff;--deep:#6d4fa8;--pale-bg:#231a38;--pale-ink:#f7f4fd;
+  --bg:#f1f8f7;--nav:#ffffff;--surface:#ffffff;--line:#d3e6e3;--ink:#0f2a2d;--mut:#4a6467;--acc:#0b8a8c;--acc-ink:#ffffff;--deep:#08696b;--pale-bg:#0f2a2d;--pale-ink:#f1f8f7;--hot:#f2a33a;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"Inter","Segoe UI",system-ui,sans-serif;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1829;--nav:#15121f;--surface:#262037;--line:#352d49;--ink:#f1edf9;--mut:#b9afcf;--acc:#b79df0;--acc-ink:#1c1829;--deep:#6d4fa8;--pale-bg:#eeeaf8;--pale-ink:#1c1829}}
-:root[data-theme="dark"]{--bg:#1c1829;--nav:#15121f;--surface:#262037;--line:#352d49;--ink:#f1edf9;--mut:#b9afcf;--acc:#b79df0;--acc-ink:#1c1829;--deep:#6d4fa8;--pale-bg:#eeeaf8;--pale-ink:#1c1829}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1719;--nav:#071012;--surface:#10272a;--line:#1d3d41;--ink:#e9f6f4;--mut:#9dbcbc;--acc:#4fd1c5;--acc-ink:#062022;--deep:#08696b;--pale-bg:#e3f4f1;--pale-ink:#0a1719;--hot:#f6b756}}
+:root[data-theme="dark"]{--bg:#0a1719;--nav:#071012;--surface:#10272a;--line:#1d3d41;--ink:#e9f6f4;--mut:#9dbcbc;--acc:#4fd1c5;--acc-ink:#062022;--deep:#08696b;--pale-bg:#e3f4f1;--pale-ink:#0a1719;--hot:#f6b756}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5rem)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.7 var(--sans)}
@@ -89,6 +90,30 @@ h3{font:700 1.2rem/1.3 var(--serif);margin:0 0 .3rem}
 .row span{color:var(--acc);font-weight:600;flex:none}
 #status{min-height:1.4rem;margin-top:.7rem;color:var(--acc);font-weight:600;font-size:.92rem}
 footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding:2rem 0 5rem;color:var(--mut);font-size:.92rem}
+
+/* UI/UX polish (theme refresh) */
+::selection{background:var(--acc);color:var(--acc-ink)}
+header.nav{background:color-mix(in srgb,var(--nav) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.badge{background:linear-gradient(135deg,var(--acc),var(--hot));box-shadow:0 4px 14px color-mix(in srgb,var(--acc) 40%,transparent)}
+.nav ul a{border-radius:8px 8px 0 0;transition:color .2s,background .2s,border-color .2s}
+.nav ul a:hover{background:color-mix(in srgb,var(--acc) 10%,transparent)}
+#theme{transition:transform .25s,border-color .2s}#theme:hover{transform:rotate(20deg) scale(1.08);border-color:var(--acc)}
+body{background:radial-gradient(900px 500px at 85% -5%,color-mix(in srgb,var(--acc) 14%,transparent),transparent 70%),var(--bg)}
+.bar{background:linear-gradient(90deg,var(--acc),var(--hot));width:5.5rem}
+h1 em{background:linear-gradient(90deg,var(--acc),var(--hot));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{transition:transform .2s,box-shadow .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:linear-gradient(135deg,var(--acc),var(--deep));border-color:transparent;color:#fff;box-shadow:0 8px 22px color-mix(in srgb,var(--acc) 35%,transparent)}
+.btn.main:hover{box-shadow:0 12px 28px color-mix(in srgb,var(--acc) 50%,transparent)}
+.card{transition:transform .25s,border-color .25s,box-shadow .25s}
+.pgrid .card:hover,.sgrid .card:hover{transform:translateY(-4px);border-color:var(--acc);box-shadow:0 14px 32px color-mix(in srgb,var(--acc) 20%,transparent)}
+.sgrid .card{border-top-color:var(--hot)}
+.pill{background:color-mix(in srgb,var(--acc) 10%,transparent)}
+.chips li{transition:background .2s,border-color .2s}.chips li:hover{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,var(--bg))}
+.tl li::before{box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 22%,transparent)}
+#certs li{transition:background .2s,padding .2s}#certs li:hover{background:color-mix(in srgb,var(--acc) 7%,transparent);padding-left:.6rem}
+.row{transition:transform .2s,border-color .2s,background .2s}.row:hover{transform:translateX(4px);background:color-mix(in srgb,var(--acc) 8%,var(--bg))}
+.contact{background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--acc) 9%,var(--surface)))}
 @media (max-width:800px){
   .hero,.about,.contact{grid-template-columns:1fr}
   .hero{padding-top:2rem;gap:1.5rem}.art{width:min(70%,280px)}
@@ -114,15 +139,15 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;paddi
   <div class="hero" id="home">
     <div class="art" aria-hidden="true">
       <svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dccbf5"/><stop offset="1" stop-color="#b79df0"/></linearGradient></defs>
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8efe9"/><stop offset="1" stop-color="#5fd0c3"/></linearGradient></defs>
         <circle cx="210" cy="230" r="190" fill="url(#g)"/>
         <circle cx="210" cy="230" r="132" fill="#ffffff"/>
-        <text x="210" y="258" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="800" font-size="86" fill="#6d4fa8">PG</text>
-        <g stroke="#f28c6b" stroke-width="7" stroke-linecap="round"><line x1="360" y1="48" x2="378" y2="20"/><line x1="388" y1="86" x2="418" y2="72"/><line x1="392" y1="124" x2="428" y2="128"/></g>
-        <g fill="#ffd1dc"><ellipse cx="82" cy="84" rx="14" ry="8" transform="rotate(-35 82 84)"/><ellipse cx="38" cy="342" rx="13" ry="7" transform="rotate(25 38 342)"/><ellipse cx="108" cy="410" rx="10" ry="6" transform="rotate(-20 108 410)"/></g>
-        <path d="M310 420C282 380 282 340 300 308C330 340 336 386 310 420Z" fill="#84a074"/>
-        <path d="M352 424C336 370 342 320 366 280C390 326 384 384 352 424Z" fill="#6c8c63"/>
-        <path d="M388 420C378 380 392 346 424 312C428 350 414 392 388 420Z" fill="#5a7a52"/>
+        <text x="210" y="258" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="800" font-size="86" fill="#08696b">PG</text>
+        <g stroke="#f2a33a" stroke-width="7" stroke-linecap="round"><line x1="360" y1="48" x2="378" y2="20"/><line x1="388" y1="86" x2="418" y2="72"/><line x1="392" y1="124" x2="428" y2="128"/></g>
+        <g fill="#ffe0b0"><ellipse cx="82" cy="84" rx="14" ry="8" transform="rotate(-35 82 84)"/><ellipse cx="38" cy="342" rx="13" ry="7" transform="rotate(25 38 342)"/><ellipse cx="108" cy="410" rx="10" ry="6" transform="rotate(-20 108 410)"/></g>
+        <path d="M310 420C282 380 282 340 300 308C330 340 336 386 310 420Z" fill="#2fa58f"/>
+        <path d="M352 424C336 370 342 320 366 280C390 326 384 384 352 424Z" fill="#1f8a78"/>
+        <path d="M388 420C378 380 392 346 424 312C428 350 414 392 388 420Z" fill="#146f62"/>
       </svg>
     </div>
     <div>
