@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Poornachandran G | Portfolio</title>
+<meta name="description" content="Portfolio of Poornachandran G, B.Sc. Computer Science student learning C, Python, Java and web development.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f7f4fd;--nav:#ffffff;--surface:#ffffff;--line:#e2daf2;--ink:#231a38;--mut:#5c5075;--acc:#7b5bc7;--acc-ink:#ffffff;--deep:#6d4fa8;--pale-bg:#231a38;--pale-ink:#f7f4fd;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"Inter","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1829;--nav:#15121f;--surface:#262037;--line:#352d49;--ink:#f1edf9;--mut:#b9afcf;--acc:#b79df0;--acc-ink:#1c1829;--deep:#6d4fa8;--pale-bg:#eeeaf8;--pale-ink:#1c1829}}
+:root[data-theme="dark"]{--bg:#1c1829;--nav:#15121f;--surface:#262037;--line:#352d49;--ink:#f1edf9;--mut:#b9afcf;--acc:#b79df0;--acc-ink:#1c1829;--deep:#6d4fa8;--pale-bg:#eeeaf8;--pale-ink:#1c1829}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5rem)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.7 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:20}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+/* nav */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:21;background:var(--nav);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:600;flex:none}
+.badge{display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--acc);color:var(--acc-ink);font:800 1rem var(--serif)}
+.nav ul{display:flex;gap:.3rem;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul a{display:block;white-space:nowrap;padding:.45rem .8rem;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--mut);border-bottom:2px solid transparent}
+.nav ul a:hover{color:var(--ink)}
+.nav ul a.on{color:var(--acc);border-bottom-color:var(--acc)}
+/* floating theme toggle */
+#theme{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:22;width:3rem;height:3rem;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:1.2rem;cursor:pointer;box-shadow:0 6px 18px #0004}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:3rem;align-items:center;padding:4.5rem 0 4rem}
+.art{width:min(100%,420px);justify-self:center}
+.art svg{width:100%;height:auto;display:block}
+.eyebrow{font:600 .8rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 1rem}
+h1{font:800 clamp(2.3rem,5.4vw,3.8rem)/1.08 var(--serif);letter-spacing:-.01em;margin:0}
+h1 em{font-style:normal;color:var(--acc)}
+.bar{width:4.5rem;height:4px;border-radius:4px;background:var(--acc);margin:1.4rem 0}
+.lead{color:var(--mut);max-width:32rem;margin:0 0 1.6rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.8rem 1.35rem;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 .98rem var(--sans);text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--acc)}
+.btn.main{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+.btn.pale{background:var(--pale-bg);border-color:var(--pale-bg);color:var(--pale-ink)}
+.find{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1.6rem;color:var(--mut);font-size:.92rem}
+.find a{border:1px solid var(--line);border-radius:999px;padding:.25rem .9rem;text-decoration:none;color:var(--ink);font-weight:500}
+.find a:hover{border-color:var(--acc);color:var(--acc)}
+/* sections */
+section{padding:3.5rem 0}
+.tag{font:600 .8rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 .4rem}
+h2{font:800 clamp(1.8rem,4vw,2.5rem)/1.12 var(--serif);margin:0 0 1.6rem}
+h3{font:700 1.2rem/1.3 var(--serif);margin:0 0 .3rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
+.card p{margin:.2rem 0;color:var(--mut)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem}
+.about p{margin:0 0 1rem;color:var(--mut)}
+.stack{display:grid;gap:.8rem;align-content:start}
+.stack .card{display:flex;align-items:baseline;gap:1rem;padding:1rem 1.3rem}
+.stack b{font:800 2rem/1 var(--serif);color:var(--acc);min-width:4.5rem}
+.stack span{color:var(--mut)}
+.tl{list-style:none;margin:2rem 0 0;padding:0 0 0 1.2rem;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 1.1rem 1rem}
+.tl li::before{content:"";position:absolute;left:-1.7rem;top:.5rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--acc)}
+.tl b{font-family:var(--serif);font-size:1.1rem}
+.tl span{display:block;color:var(--mut)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.1rem}
+.pill{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:.1rem .7rem;margin-bottom:.8rem}
+.sub{color:var(--ink)!important;font-weight:600;font-size:.92rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}
+.sgrid .card{border-top:3px solid var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:.8rem 0 0;padding:0}
+.chips li{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.2rem .8rem;font-size:.92rem;font-weight:500}
+#certs{list-style:none;margin:0;padding:0;counter-reset:c}
+#certs li{counter-increment:c;display:flex;align-items:baseline;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+#certs li::before{content:counter(c,decimal-leading-zero);font:700 1rem var(--serif);color:var(--acc);min-width:2rem}
+#certs b{font-weight:600;flex:1}
+#certs small{color:var(--mut);text-align:right}
+#more{margin-top:1.4rem}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:2.4rem}
+.contact p{color:var(--mut);margin:0 0 1.4rem}
+.links{display:grid;gap:.7rem}
+.row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1.1rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);text-decoration:none;font:500 .98rem var(--sans);color:var(--ink);width:100%;text-align:left;cursor:pointer}
+.row:hover{border-color:var(--acc)}
+.row small{color:var(--mut);font-weight:400;overflow-wrap:anywhere}
+.row span{color:var(--acc);font-weight:600;flex:none}
+#status{min-height:1.4rem;margin-top:.7rem;color:var(--acc);font-weight:600;font-size:.92rem}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding:2rem 0 5rem;color:var(--mut);font-size:.92rem}
+@media (max-width:800px){
+  .hero,.about,.contact{grid-template-columns:1fr}
+  .hero{padding-top:2rem;gap:1.5rem}.art{width:min(70%,280px)}
+  .brand b{display:none}.contact{padding:1.5rem}
+  #certs li{flex-wrap:wrap}#certs small{text-align:left;width:100%;padding-left:3rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="badge">PG</span><b>Poornachandran G</b></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li><li><a href="#certs-section">Certificates</a></li><li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+<button id="theme" type="button" aria-label="Switch colour theme">☀</button>
+
+<main class="wrap" id="top">
+  <div class="hero" id="home">
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dccbf5"/><stop offset="1" stop-color="#b79df0"/></linearGradient></defs>
+        <circle cx="210" cy="230" r="190" fill="url(#g)"/>
+        <circle cx="210" cy="230" r="132" fill="#ffffff"/>
+        <text x="210" y="258" text-anchor="middle" font-family="Source Serif 4, Georgia, serif" font-weight="800" font-size="86" fill="#6d4fa8">PG</text>
+        <g stroke="#f28c6b" stroke-width="7" stroke-linecap="round"><line x1="360" y1="48" x2="378" y2="20"/><line x1="388" y1="86" x2="418" y2="72"/><line x1="392" y1="124" x2="428" y2="128"/></g>
+        <g fill="#ffd1dc"><ellipse cx="82" cy="84" rx="14" ry="8" transform="rotate(-35 82 84)"/><ellipse cx="38" cy="342" rx="13" ry="7" transform="rotate(25 38 342)"/><ellipse cx="108" cy="410" rx="10" ry="6" transform="rotate(-20 108 410)"/></g>
+        <path d="M310 420C282 380 282 340 300 308C330 340 336 386 310 420Z" fill="#84a074"/>
+        <path d="M352 424C336 370 342 320 366 280C390 326 384 384 352 424Z" fill="#6c8c63"/>
+        <path d="M388 420C378 380 392 346 424 312C428 350 414 392 388 420Z" fill="#5a7a52"/>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow">B.Sc. Computer Science student | Python and C learner</p>
+      <h1>Hi, I’m Poornachandran. I turn what I learn into <em>working code</em>.</h1>
+      <div class="bar"></div>
+      <p class="lead">I’m building strong foundations in C, Python and HTML, and learning Java, cloud and process mining along the way.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">View my projects →</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+      <div class="find">Find me on
+        <a href="https://www.linkedin.com/in/poornachandran-ganesan-411948389" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/poorna1610" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <p class="tag">About</p>
+    <h2>A student who learns by building</h2>
+    <div class="about">
+      <div>
+        <p>I’m a second-year Computer Science student at KG College of Arts and Science in Coimbatore, graduating in 2028. My foundations are C, Python and HTML, and I’m strengthening them with programming and web development practice.</p>
+        <p>Alongside classes I finish online courses in Java, data structures, MongoDB, Azure fundamentals, big data and process mining with Celonis. My goal is practical experience and a career in the technology industry.</p>
+        <ul class="tl">
+          <li><b>B.Sc. Computer Science</b><span>KG College of Arts and Science, Coimbatore | Expected 2028</span></li>
+          <li><b>Next</b><span>Internships and real projects to apply what I’ve learned</span></li>
+        </ul>
+      </div>
+      <div class="stack">
+        <div class="card"><b>14</b><span>Certificates and courses</span></div>
+        <div class="card"><b>3</b><span>Core languages: C, Python, HTML</span></div>
+        <div class="card"><b>2028</b><span>Graduation year</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="tag">Projects</p>
+    <h2>Projects and practice</h2>
+    <div class="pgrid">
+      <div class="card"><span class="pill">Guided project</span><h3>Supermarket App</h3><p class="sub">Java OOP | Coursera</p><p>A supermarket application built with object-oriented Java, covering classes, objects and program structure.</p></div>
+      <div class="card"><span class="pill">Personal project</span><h3>This portfolio</h3><p class="sub">HTML, CSS, JavaScript</p><p>A responsive single-page site with a dark and light theme and an expandable certificate list.</p></div>
+      <div class="card"><span class="pill">Training</span><h3>Process mining with Celonis</h3><p class="sub">Celonis Academy</p><p>Six courses covering data loading, process mining, audit and action flows for process automation.</p></div>
+    </div>
+    <p style="margin-top:1.3rem;color:var(--mut)">More on <a href="https://github.com/poorna1610" target="_blank" rel="noopener" style="color:var(--acc)">GitHub</a>.</p>
+  </section>
+
+  <section id="skills">
+    <p class="tag">Skills</p>
+    <h2>What I work with</h2>
+    <div class="sgrid">
+      <div class="card"><h3>Write daily</h3><ul class="chips"><li>C</li><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
+      <div class="card"><h3>Learning</h3><ul class="chips"><li>Java OOP</li><li>Data structures</li><li>MongoDB</li><li>Azure basics</li><li>Big data</li></ul></div>
+      <div class="card"><h3>Process mining</h3><ul class="chips"><li>Celonis</li><li>Action flows</li><li>Automation</li></ul></div>
+      <div class="card"><h3>Languages</h3><ul class="chips"><li>Tamil</li><li>English</li></ul></div>
+    </div>
+  </section>
+
+  <section id="certs-section">
+    <p class="tag">Certificates</p>
+    <h2>Courses I’ve completed</h2>
+    <ol id="certs"></ol>
+    <button class="btn" id="more" type="button" aria-expanded="false">Show all 14</button>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div>
+        <p class="tag">Contact</p>
+        <h2 style="margin-bottom:1rem">Let’s talk</h2>
+        <p>I’m open to internships and learning opportunities. Email is the quickest way to reach me.</p>
+        <a class="btn pale" href="mailto:poornachandran16102007@gmail.com">Send an email</a>
+      </div>
+      <div class="links">
+        <button class="row" id="copy" type="button"><div>Email<br><small>poornachandran16102007@gmail.com</small></div><span>Copy</span></button>
+        <a class="row" href="https://www.linkedin.com/in/poornachandran-ganesan-411948389" target="_blank" rel="noopener"><div>LinkedIn<br><small>poornachandran-ganesan</small></div><span>Open →</span></a>
+        <a class="row" href="https://github.com/poorna1610" target="_blank" rel="noopener"><div>GitHub<br><small>poorna1610</small></div><span>Open →</span></a>
+        <div id="status" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span>© <span id="yr">2026</span> Poornachandran G</span><a href="#top">Back to top</a></footer>
+</main>
+
+<script>
+(function(){
+  var EMAIL = "poornachandran16102007@gmail.com", root = document.documentElement;
+  var certs = [
+    ["Programming in Python","Coursera"],["C Programming with DSA Foundation","Coursera"],
+    ["Advanced Java Development","Coursera"],["Create a Supermarket App using Java OOP","Coursera"],
+    ["Preparing for the AZ-900 Microsoft Azure Fundamentals Exam","Coursera"],
+    ["MongoDB Basics for Students – Skill Badge","ICT Academy (Skill-a-thon 2026)"],
+    ["Celonis Foundations","Celonis Academy"],["Get Data Into Celonis","Celonis Academy"],
+    ["Process Mining – From Theory to Execution","Celonis Academy"],["Build Action Flows","Celonis Academy"],
+    ["Process Mining Audit Professional","Celonis Academy"],["Process Automation Concepts","Celonis Academy"],
+    ["Digital Application Fundamentals (STEM)","FutureSkills Prime (NASSCOM)"],["Big Data Computing","NPTEL"]
+  ];
+  var list = document.getElementById("certs"), more = document.getElementById("more"), all = false;
+  function render(){
+    list.innerHTML = "";
+    certs.slice(0, all ? certs.length : 6).forEach(function(c){
+      var li = document.createElement("li"), b = document.createElement("b"), s = document.createElement("small");
+      b.textContent = c[0]; s.textContent = c[1]; li.appendChild(b); li.appendChild(s); list.appendChild(li);
+    });
+    more.textContent = all ? "Show fewer" : "Show all " + certs.length;
+    more.setAttribute("aria-expanded", all ? "true" : "false");
+  }
+  more.addEventListener("click", function(){ all = !all; render(); });
+  render();
+
+  var status = document.getElementById("status");
+  document.getElementById("copy").addEventListener("click", function(){
+    function ok(){ status.textContent = "Email copied to clipboard."; }
+    function fail(){ status.textContent = "Copy didn’t work. My email is " + EMAIL; }
+    try { navigator.clipboard.writeText(EMAIL).then(ok, fail); } catch(e){ fail(); }
+  });
+
+  var tbtn = document.getElementById("theme");
+  function setIcon(){ tbtn.textContent = root.getAttribute("data-theme") === "dark" ? "☀" : "☾"; }
+  tbtn.addEventListener("click", function(){
+    root.setAttribute("data-theme", root.getAttribute("data-theme") === "dark" ? "light" : "dark"); setIcon();
+  });
+  setIcon();
+
+  var links = document.querySelectorAll(".nav ul a"), ids = ["home","about","projects","skills","certs-section","contact"];
+  function spy(){
+    var y = window.scrollY + window.innerHeight * 0.35, cur = "home";
+    ids.forEach(function(id){ var e = document.getElementById(id); if (e && e.offsetTop <= y) cur = id; });
+    links.forEach(function(l){ var h = l.getAttribute("href").slice(1); l.classList.toggle("on", h === cur || (h === "top" && cur === "home")); });
+  }
+  window.addEventListener("scroll", spy, {passive:true}); spy();
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
